@@ -1,0 +1,139 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Lato',sans-serif;
+    margin: 0;
+    padding: 0; 
+}
+html, body {
+    height: 100%;
+    margin: 0;
+}
+body {
+    display: grid;
+    grid-template-rows: 1fr auto; /* ขยายเนื้อหาหลักให้เต็มพื้นที่และให้ฟุตเตอร์อยู่ที่ด้านล่าง */
+}
+
+/* ****************************************** ส่วนของหน้าโฮม */
+
+
+nav {
+    position: fixed; /* ทำให้ navbar เลื่อนไปตามการเลื่อนหน้าเว็บ */
+    background-color: rgba(0, 31, 61, 0); /* ใส ตอนที่อยู่ที่ด้านบนสุด */
+    color: white;
+    padding: 10px 0;
+    width: 100%; /* ความกว้างเต็มหน้าจอ */
+    z-index: 1000; /* ทำให้แน่ใจว่า navbar อยู่ด้านบนสุด */
+    transition: background-color 0.3s ease; /* เพิ่มความเรียบเนียนในการเปลี่ยนสีพื้นหลัง */
+}
+
+nav.scrolled {
+    background-color: #001f3d; /* ทึบเมื่อลงมาที่ด้านล่าง */
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px; /* กำหนดความกว้างของ container */
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.nav-con {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.LOGOO img {
+    height: 50px; /* ปรับขนาดของโลโก้ */
+}
+.navbar {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px; /* ช่องว่างระหว่างลิงก์ */
+}
+.navbar li {
+    display: inline;
+}
+.navbar a {
+    color: #f36d00;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+}
+.navbar a:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+.content {
+    padding: 20px;
+    height: 2000px; /* สำหรับการทดสอบการเลื่อน */
+}
+
+footer {
+    background-color: #fa9939; /* สีพื้นหลังของฟุตเตอร์ */
+    color: #fff; /* สีข้อความในฟุตเตอร์ */
+    padding: 20px; /* ระยะห่างภายในของฟุตเตอร์ */
+    position: relative; /* ทำให้สามารถจัดตำแหน่งโลโก้ได้อย่างอิสระ */
+    font-size: 14px; /* ขนาดฟอนต์ของข้อความ */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* จัดการตำแหน่งของโลโก้และข้อมูล */
+    align-items: flex-start; /* จัดตำแหน่งในแนวตั้ง */
+    max-width: 1200px; /* กำหนดความกว้างสูงสุดของฟุตเตอร์ */
+    margin: 0 auto; /* จัดศูนย์กลางของฟุตเตอร์ */
+}
+
+.footer-logo {
+    flex: 1; /* ให้โลโก้ใช้พื้นที่ 1 ส่วน */
+}
+
+.footer-logo img {
+    max-width: 100px; /* ขนาดสูงสุดของโลโก้ */
+}
+
+.footer-info {
+    flex: 3; /* ให้ข้อมูลใช้พื้นที่ 3 ส่วน */
+    display: flex;
+    justify-content: space-between; /* จัดการตำแหน่งของข้อมูล */
+    flex-wrap: wrap; /* ทำให้ข้อมูลพับได้หากไม่พอพื้นที่ */
+}
+
+.footer-section {
+    flex: 1; /* ให้แต่ละหมวดหมู่ข้อมูลใช้พื้นที่เท่าๆ กัน */
+    margin: 0 20px; /* ระยะห่างระหว่างหมวดหมู่ข้อมูล */
+}
+
+.footer-section h4 {
+    border-bottom: 2px solid #fff; /* เพิ่มเส้นใต้หัวข้อ */
+    padding-bottom: 5px; /* ระยะห่างใต้หัวข้อ */
+    margin-bottom: 10px; /* ระยะห่างระหว่างหัวข้อกับข้อความ */
+}
+
+.footer-icon {
+    display: flex;
+    flex-direction: column; /* Align icons in a column */
+    align-items: center; /* Center icons horizontally */
+}
+
+.footer-icon h4 {
+    margin-bottom: 10px; /* Space between heading and icons */
+}
+
+.footer-icon a {
+    color: #fff; /* Color of the icons */
+    font-size: 36px; /* Size of the icons */
+    margin: 5px; /* Space between icons */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.footer-icon a:hover {
+    color: #281580; /* Change icon color on hover */
+}
+
+.tab img {
+    width: 100%; 
+    height: auto; 
+    max-width: 100%; 
+}

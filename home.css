@@ -1,0 +1,951 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&display=swap");
+
+
+
+*{
+    box-sizing: border-box;
+    font-family: 'Lato',sans-serif;
+    margin: 0;
+    padding: 0; 
+    
+}
+body{
+    background-color: #f0e4da;
+    
+}
+/* ่ส่วนภาพสไสด์ */
+section1 {
+    position: relative;
+    width: 100% ;
+    height: 195vh;
+    background: #f0e4da;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 10;
+}
+
+/* ส่วนการ์ด */
+section2{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0e4da;
+    z-index: 1;
+    font-family: 'Lato',sans-serif;
+}
+
+/* ส่วนท้าย */
+section3 {
+    position: relative;
+    width: 100% ;
+    height: 320vh;
+    background: #f0e4da;
+    /* display: flex; */
+    z-index: 1;
+    font-family: 'Lato',sans-serif;
+}
+
+
+
+
+
+
+/* รูปบนสุด */
+.imggi {
+    position: relative;
+    width: 100%; /* ให้คอนเทนเนอร์ขยายเต็มความกว้าง */
+    height: 80vh; /* ปรับความสูงของคอนเทนเนอร์ให้พอดีกับหน้าจอ */
+    overflow: hidden;
+}
+
+.imggi img {
+    width: 100%; /* กำหนดให้ภาพขยายเต็มความกว้าง */
+    height: auto; /* ปรับความสูงของภาพตามสัดส่วน */
+    max-height: 100%; /* ป้องกันไม่ให้ภาพสูงเกินความสูงของคอนเทนเนอร์ */
+    object-fit: contain; /* ปรับขนาดภาพให้พอดีกับคอนเทนเนอร์โดยไม่ตัดส่วนของภาพ */
+    display: block;
+    margin: 0 auto; /* จัดให้ภาพอยู่กลาง */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ข้อความบยรูปบนที่สุด */
+.textpap {
+    position: absolute; 
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    color: #fff; 
+    z-index: 2; 
+    text-align: center; 
+    padding: 20px;
+    width: 80%; 
+    box-sizing: border-box; 
+    font-family: Arial, sans-serif; 
+    max-width: 800px; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+}
+
+.textpap h1 {
+    margin: 0 0 10px 0; 
+    font-size: 2.5vw;
+    text-align: center;
+    border-radius: 10px; 
+    padding: 10px; 
+}
+
+.textpap p {
+    margin: 0;
+    font-size: 1.2vw; 
+    text-align: left;
+    
+    border-radius: 10px; 
+    padding: 10px; 
+}
+
+
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .textpap h1 {
+        font-size: 5vw; /* ปรับขนาดฟอนต์ของหัวเรื่องเมื่อหน้าจอเล็ก */
+    }
+
+    .textpap p {
+        font-size: 3vw; /* ปรับขนาดฟอนต์ของข้อความเมื่อหน้าจอเล็ก */
+    }
+}
+
+@media (max-width: 480px) {
+    .textpap h1 {
+        font-size: 7vw; /* ปรับขนาดฟอนต์ของหัวเรื่องเมื่อหน้าจอเล็กมาก */
+    }
+
+    .textpap p {
+        font-size: 5vw; /* ปรับขนาดฟอนต์ของข้อความเมื่อหน้าจอเล็กมาก */
+    }
+}
+
+
+
+
+.text-big{
+    text-align: center;
+    color: #555;
+    margin: 100px;
+
+}
+.highlight {
+            color: #ff5733; /* สีที่ต้องการเปลี่ยน */
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* สไลด์ */
+.slideshow-container {
+    max-width: 1800px; /* กำหนดความกว้างสูงสุดของคอนเทนเนอร์ */
+    margin: 10px auto; /* จัดศูนย์กลางคอนเทนเนอร์ */
+    position: relative;
+    overflow: hidden; /* ซ่อนส่วนที่เกิน */
+}
+
+.slide-img {
+    width: 1000px; /* ทำให้รูปภาพปรับขนาดให้พอดีกับคอนเทนเนอร์ */
+    height: auto; /* ให้ความสูงปรับตามอัตราส่วนของภาพ */
+    max-width: 100%; /* จำกัดขนาดความกว้างสูงสุด */
+    max-height: 600px; /* จำกัดขนาดความสูงสูงสุด */
+    border-radius: 10px; /* เพิ่มความโค้งมนเล็กน้อย */
+    display: block;
+    margin: 0 auto; /* จัดศูนย์กลางรูปภาพ */
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from { opacity: 0.4; } 
+    to { opacity: 1; }
+}
+
+.btn-container {
+    text-align: center;
+    position: absolute;
+    bottom: 100rem; /* ปรับตำแหน่งของปุ่มตามที่ต้องการ */
+    left: 50%;
+    transform: translateX(-50%); /* จัดศูนย์กลางปุ่ม */
+    width: 100%; /* ให้ปุ่มใช้ความกว้างทั้งหมด */
+}
+
+.dot {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.active {
+    background-color: #717171;
+}
+
+
+
+
+
+
+/* ข้อความก่อนหน้า */
+.text-atibuy{
+    justify-content: space-between;
+    display: flex;
+    
+}
+.text-atibuy p {
+    font-size: 1.5rem; /* ขนาดฟอนต์หลักสำหรับข้อความใน <p> */
+    line-height: 1.6; /* เพิ่มพื้นที่ระหว่างบรรทัด */
+    margin: 5rem; /* ลบ margin รอบข้อความ */
+    padding: 0; /* ลบ padding รอบข้อความ */
+}
+
+.highlight {
+    font-weight: bold; /* ทำให้ข้อความหนาขึ้น */
+    color: #ff5733; /* สีของข้อความที่เน้น (เปลี่ยนสีตามต้องการ) */
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* การ์ด */
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to wrap into the next line */
+    justify-content: space-between; /* Distribute space between cards */
+    align-items: flex-start; /* Align items at the start */
+    padding: 20px;
+    gap: 20px; /* Space between cards */
+    box-sizing: border-box; /* Ensure padding is included in width */
+    
+}
+
+.card {
+    flex: 1 1 calc(33.333% - 20px); /* 3 cards per row with space between */
+    height: 300px; /* Adjust height as needed */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+    transition: 0.5s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(20px);
+}
+
+.card1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(41, 26, 243, 0.5), rgba(68, 78, 216, 0.267));
+    z-index: 2;
+    transition: 0.5s;
+    opacity: 0;
+}
+.card2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 145, 2, 0.5), rgba(255, 145, 0, 0.192));
+    z-index: 2;
+    transition: 0.5s;
+    opacity: 0;
+}
+.card3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(228, 188, 57, 0.699), rgba(250, 231, 57, 0.267));
+    z-index: 2;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.card .icon-pic1 {
+    text-align: center;
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position to exactly center */
+    color: #045cff; /* Set the color of the icon */
+    font-size: 50px; /* Set the size of the icon */
+    z-index: 4; /* Make sure the icon is on top of the image */
+}
+
+.card .icon-pic2 {
+    text-align: center;
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position to exactly center */
+    color: #ff5404; /* Set the color of the icon */
+    font-size: 50px; /* Set the size of the icon */
+    z-index: 4; /* Make sure the icon is on top of the image */
+}
+
+.card .icon-pic3 {
+    text-align: center;
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position to exactly center */
+    color: #eeff04; /* Set the color of the icon */
+    font-size: 50px; /* Set the size of the icon */
+    z-index: 4; /* Make sure the icon is on top of the image */
+}
+
+.card h6 {
+    text-align: center;
+}
+
+.card .info {
+    position: relative;
+    z-index: 3;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.5s all;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    text-align: center; /* Center text inside info */
+}
+
+.card:hover .info {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.card .info h1 {
+    margin: 0;
+}
+
+.card .info p {
+    letter-spacing: 1px;
+    font-size: 15px;
+    margin-top: 1px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 calc(50% - 20px); /* Two cards per row on smaller screens */
+        height: auto; /* Allow height to adjust automatically */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        flex: 1 1 100%; /* One card per row on very small screens */
+    }
+}
+
+
+
+
+
+/* การ์ด 2 */
+
+.wrapper2 {
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to wrap into the next line */
+    justify-content: space-between; /* Distribute space between cards */
+    align-items: flex-start; /* Align items at the start */
+    padding: 20px;
+    gap: 20px; /* Space between cards */
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+
+.card4::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 255, 64, 0.575), rgba(68, 78, 216, 0.267));
+    z-index: 2;
+    transition: 0.5s;
+    opacity: 0;
+}
+.card5::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 2, 2, 0.5), rgba(255, 145, 0, 0.192));
+    z-index: 2;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.card .icon-pic4 {
+    text-align: center;
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position to exactly center */
+    color: rgba(53, 255, 2, 0.842); /* Set the color of the icon */
+    font-size: 50px; /* Set the size of the icon */
+    z-index: 4; /* Make sure the icon is on top of the image */
+}
+
+.card .icon-pic5 {
+    text-align: center;
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position to exactly center */
+    color: rgba(255, 0, 0, 0.932); /* Set the color of the icon */
+    font-size: 50px; /* Set the size of the icon */
+    z-index: 4; /* Make sure the icon is on top of the image */
+}
+
+
+
+
+
+
+
+/* รูปภาพแบรนเนอร์ */
+.picky img{
+    
+    width: 100%; 
+    height: auto; 
+    max-width: 100%;
+    
+    
+}
+
+/* ตัวเลขจำนวนต่างๆ */
+
+
+#numberDisplay, #numberDisplay2, #numberDisplay3 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.num-container {
+    display: flex; /* ใช้ Flexbox เพื่อจัดเรียงในแถวเดียวกัน */
+    justify-content: space-between; /* จัดระยะห่างระหว่างแต่ละแถว */
+    align-items: center; /* จัดตำแหน่งให้อยู่กลางในแนวตั้ง */
+    margin-bottom: 20px; /* เพิ่มพื้นที่ด้านล่างระหว่างแถว */
+    padding: 29px; /* เพิ่มพื้นที่ภายใน */
+    margin: 0; /* ลบพื้นที่รอบ ๆ กล่อง */
+    width: 100%; /* ขยายเต็มความกว้างของหน้าจอ */
+    height: 20vh; /* ขยายเต็มความสูงของหน้าจอ */
+    background-color: #001f3d; /* สีพื้นหลัง */
+    box-sizing: border-box; /* รวม padding และ border ในการคำนวณขนาด */
+}
+
+.num-container h1 {
+    margin: 0; /* ลบช่องว่างรอบ ๆ <h1> */
+    font-size: 1.5rem; /* ขนาดฟอนต์ของข้อความ */
+    color:#555;
+}
+.num-container div {
+    font-size: 2rem; /* ขนาดฟอนต์ของตัวเลข */
+    font-weight: bold; /* ทำให้ฟอนต์หนา */
+    text-align: center;
+    color: #f36d00;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Card container wrapper */
+:root {
+    /*========== Colors ==========*/
+    --white-color: hsl(170, 12%, 98%);
+    --gray-color: hsl(170, 4%, 60%);
+    --black-color: hsl(170, 12%, 8%);
+  
+    /*========== Font and typography ==========*/
+    --body-font: "Bona Nova", serif;
+    --normal-font-size: .938rem;
+}
+  
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1120px) {
+    :root {
+        --normal-font-size: 1rem;
+    }
+}
+  
+/*=============== BASE ===============*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--black-color);
+    color: var(--gray-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/*=============== CARD ===============*/
+.card-wrapper {
+    display: grid;
+    margin-inline: 1.5rem;
+    padding-block: 5rem;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* กำหนด 3 คอลัมน์ */
+    justify-content: center;
+    gap: 2rem;
+}
+
+.card-item {
+    position: relative;
+    background-color: var(--black-color);
+    border: 2px solid var(--gray-color);
+    padding: 3rem 1.5rem 3rem; /* ปรับ padding ด้านล่างให้มากขึ้น */
+    display: grid;
+    row-gap: 1rem;
+    overflow: hidden;
+    height: 450px; /* เพิ่มความสูงของการ์ด */
+    transition: background-color .6s;
+}
+
+
+.card-image {
+    width: 200px;
+    justify-self: center;
+    filter: drop-shadow(0 8px 24px hsla(170, 12%, 8%, .1));
+    transition: transform .4s;
+}
+
+.card-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    transition: transform .4s, opacity .4s;
+}
+
+.card-title {
+    font-size: var(--normal-font-size);
+    font-weight: 400;
+}
+
+.card-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/img/bg-card.png');
+    background-position: center;
+    background-size: 90%; /* ปรับเป็น 50% เพื่อให้ภาพพื้นหลังย่อเล็กลง */
+    z-index: -1;
+    transition: transform .4s;
+}
+
+
+.card-button {
+    background-color: var(--white-color);
+    padding: .75rem 1rem;
+    color: var(--black-color);
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+    justify-self: center;
+    box-shadow: 0 8px 24px hsla(170, 12%, 8%, .1);
+    position: absolute;
+    bottom: -1.5rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: transform .4s, opacity .4s;
+}
+
+.card-button i {
+    font-size: 1.25rem;
+    transition: transform .4s;
+}
+
+.card-button:hover i {
+    transform: translateX(.5rem);
+}
+
+/* Card animation */
+.card-item:hover .card-image {
+    transform: translateY(-1.5rem);
+}
+
+.card-item:hover .card-info {
+    transform: translateY(-4.5rem);
+    opacity: 0;
+}
+
+.card-item:hover {
+    background-color: transparent;
+}
+
+.card-item:hover .card-background {
+    transform: scale(1);
+}
+
+.card-item:hover .card-button {
+    transform: translateY(-3.75rem);
+    opacity: 1;
+    pointer-events: initial;
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 300px) {
+    .card-wrapper {
+        margin-inline: 1rem;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr; /* แสดงผล 1 คอลัมน์บนหน้าจอที่มีความกว้างน้อย */
+    }
+}
+
+/* For large devices */
+@media screen and (min-width: 1120px) {
+    .card-wrapper {
+        height: 100vh;
+        display: grid;
+        align-items: center;
+    }
+
+    .card-image {
+        width: 220px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ตัว container หลัก */
+.content-container {
+    display: flex;
+    justify-content: center; /* จัดภาพให้กลางหน้า */
+    align-items: center; /* จัดแนวตั้งให้กลาง */
+    width: 100%;
+    height: 100vh; /* ความสูงของหน้าจอ */
+    padding: 20px; /* เพิ่มระยะห่างจากขอบของหน้าจอ */
+    box-sizing: border-box;
+    gap: 20px; /* เพิ่มระยะห่างระหว่างข้อความและภาพ */
+    flex-wrap: wrap; /* ป้องกันการขยายออกไปบนจอใหญ่ */
+    margin-top: -20vh;
+}
+
+.image-container {
+    width:60%; /* ควบคุมขนาดของ container */
+    max-width: 75vh; /* จำกัดขนาดสูงสุดไม่ให้ใหญ่เกินไป */
+    aspect-ratio: 4 / 3; /* รักษาอัตราส่วนของรูป */
+    overflow: hidden; /* ซ่อนส่วนที่เกินออกมา */
+    border-radius: 15px; /* ทำมุมของรูปภาพให้มน */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้กับรูปภาพ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    width: 100%; /* ทำให้รูปเต็มพื้นที่ container */
+    height: 100%; /* ทำให้รูปเต็มพื้นที่ container */
+    object-fit: cover; /* ให้รูปภาพไม่เบี้ยวและเต็มพื้นที่ */
+    transition: transform 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column; /* ซ้อนแนวตั้งเมื่อจอเล็ก */
+        gap: 10px;
+    }
+
+    .image-container {
+        width: 100%; /* ปรับให้ใหญ่ขึ้นบนจอเล็ก */
+        max-width: 250px;
+    }
+}
+
+  
+
+  
+  /* การจัดข้อความ */
+.text-container1 {
+    width: 50%; /* ให้ข้อความครอบครองครึ่งหนึ่งของหน้าจอ */
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif; /* กำหนดฟอนต์ */
+    background-color: #f9f9f9; /* พื้นหลังของข้อความ */
+    border-radius: 10px; /* ทำมุมของข้อความให้มน */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* เงาเบาๆ ให้ข้อความ */
+    text-align: left; /* จัดข้อความให้อยู่ทางซ้าย */
+    margin-left: -20vh;
+  }
+  
+  /* การจัดการหัวข้อ */
+  .text-container1 h2 {
+    font-size: 2.5rem; /* ขนาดตัวอักษรหัวข้อใหญ่ขึ้น */
+    color: #333; /* สีของหัวข้อ */
+    margin-top: 0;
+    margin-bottom: 15px; /* ระยะห่างระหว่างหัวข้อและข้อความ */
+    font-weight: bold; /* ตัวหนา */
+    letter-spacing: 1px; /* เพิ่มระยะห่างระหว่างตัวอักษร */
+    text-transform: uppercase; /* ตัวพิมพ์ใหญ่ทั้งหมด */
+    border-bottom: 2px solid #3498db; /* เส้นใต้หัวข้อ */
+    padding-bottom: 5px; /* ระยะห่างใต้หัวข้อ */
+  }
+  
+  /* การจัดการข้อความ */
+  .text-container1 p {
+    font-size: 1.1rem; /* ขนาดตัวอักษรของข้อความใหญ่ขึ้นเล็กน้อย */
+    color: #555; /* สีของข้อความ */
+    line-height: 1.8; /* เพิ่มระยะห่างระหว่างบรรทัด */
+    text-align: justify; /* จัดข้อความให้ชิดขอบ */
+    letter-spacing: 0.5px; /* เพิ่มระยะห่างระหว่างตัวอักษร */
+    margin-bottom: 20px; /* ระยะห่างระหว่างข้อความ */
+    font-style: italic; /* ทำข้อความเป็นตัวเอียง */
+  }
+  
+  /* เพิ่มการเน้นคำสำคัญ */
+  p strong {
+    color: #3498db; /* เปลี่ยนสีข้อความที่เป็นตัวหนา */
+    font-weight: bold; /* ตัวหนา */
+  }
+  
+  /* เพิ่มลิงก์ */
+  a {
+    color: #3498db; /* สีของลิงก์ */
+    text-decoration: none; /* เอาขีดเส้นใต้ลิงก์ออก */
+  }
+  
+  a:hover {
+    text-decoration: underline; /* เมื่อเมาส์วางบนลิงก์ ให้ขีดเส้นใต้ */
+    color: #2980b9; /* เปลี่ยนสีของลิงก์เมื่อ hover */
+  }
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ส่วนของรูปแกลเลอรี่ */
+  .gallery-section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.gallery-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    width: calc(33.333% - 20px); /* ใช้ calc เพื่อลดช่องว่างระหว่างภาพ */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* กำหนดให้แสดง 2 แถวในหน้าจอเล็ก */
+@media screen and (max-width: 768px) {
+    .gallery-item {
+        width: calc(50% - 20px); /* แสดงภาพ 2 ภาพในแถวเดียว */
+    }
+}
+
+/* กำหนดให้แสดง 1 แถวในหน้าจอเล็กที่สุด */
+@media screen and (max-width: 480px) {
+    .gallery-item {
+        width: 100%; /* แสดงภาพ 1 ภาพเต็มหน้าจอ */
+    }
+}
+
+
+
+
+
+
+
+
+/* QR */
+.main-container {
+    text-align: center; /* จัดตำแหน่งข้อความและรูปภาพให้เป็นกลาง */
+    height: 100vh; /* ใช้ความสูงของหน้าจอ */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* จัดให้เนื้อหากลางแนวตั้ง */
+    align-items: center; /* จัดให้เนื้อหากลางแนวนอน */
+
+}
+
+.title-container {
+    margin-bottom: 20px; /* เพิ่มระยะห่างระหว่างหัวข้อและรูปภาพ */
+}
+
+.image-container {
+    display: flex;
+    justify-content: center; /* จัดตำแหน่งรูปภาพให้อยู่กลาง */
+    align-items: center; /* จัดแนวรูปภาพให้ตรงกลางในแนวตั้ง */
+    width: 100%; /* ให้ container ของภาพขยายเต็มหน้าจอ */
+}
+
+.image-item {
+    max-width: 360px; /* จำกัดขนาดภาพให้ไม่เกิน 360px */
+    max-height: 360px; /* จำกัดความสูงของภาพให้ไม่เกิน 360px */
+    width: auto; /* ให้ความกว้างของภาพคำนวณตามสัดส่วน */
+    height: auto; /* ให้ความสูงของภาพคำนวณตามสัดส่วน */
+    object-fit: contain; /* ควบคุมให้ภาพไม่ถูกบีบหรือขยายผิดสัดส่วน */
+}
+
+
+
+
+
+
+
+
+
+

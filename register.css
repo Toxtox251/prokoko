@@ -1,0 +1,207 @@
+section1{
+    position: relative;
+    width: 100% ;
+    height: auto;
+    background: #f0e4da;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+}
+
+section2{
+    position: relative;
+    width: 100% ;
+    height: auto;
+    background: #f0e4da;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+}
+/* หน้าสมัครเรียน */
+.text {
+    position: relative;
+    opacity: 0; /* ซ่อนข้อความเริ่มต้น */
+    transform: translateY(100px); /* ซ่อนข้อความจากด้านล่าง */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* เพิ่มการเปลี่ยนแปลง */
+    text-align: center;
+    color: #555;
+}
+
+.text.visible {
+    opacity: 1; /* แสดงข้อความ */
+    transform: translateY(0); /* ขยับข้อความขึ้น */
+}
+
+.highlight {
+    color: #fa9939;
+}
+
+/* เพิ่มเนื้อหาหลักให้มีความสูงเพียงพอเพื่อทดสอบการเลื่อน */
+.content {
+    height: auto; /* ความสูงเพียงพอเพื่อให้เกิดการเลื่อน */
+    padding: 20px;
+}
+
+
+
+
+
+
+
+
+/* ส่วนของบาร์สมัครเรียน */
+.barsamak img{
+    width: 100%;
+    height: auto;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    max-width: 100%;
+}
+
+
+
+/* ส่วนของปุ่ม */
+.button-regis {
+    font-family: Pridi;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    position: relative; /* ต้องกำหนด position เป็น relative หรือ absolute เพื่อให้ z-index ทำงานได้ */
+    z-index: 998;
+    top: -270px;
+    margin: 0px;
+    margin-bottom: -450px;
+}
+
+.button-regis a{
+    position: relative;
+    background:#fff;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    padding: 10px 30px;
+    transition: 0.5s;
+}
+
+.button-regis a:hover{
+    background: var(--clr);
+    color: #fa9939;
+    letter-spacing: 0.15em;
+    box-shadow: 0 0 10px#fa9939;
+}
+
+.button-regis a:before{
+    content: '';
+    position: absolute;
+    inset:  2px;
+    background: #001f3d;
+}
+
+.button-regis a span{
+    position: relative;
+    z-index: 5;
+}
+
+
+
+
+/* วิดีโอ */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+}
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 70%;
+    background-color: rgba(0, 0, 0, 0.7); /* สีพื้นหลังโปร่งแสง */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    display: flex; /* ใช้ Flexbox สำหรับการจัดตำแหน่ง */
+}
+
+/* เนื้อหาของป็อบอัพ */
+.popup-content {
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* ปุ่มปิด */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* ปรับขนาดของรูปภาพในป็อบอัพ */
+.popup img {
+    max-width: 100%;   /* กำหนดให้ความกว้างของภาพไม่เกิน 100% ของพื้นที่ */
+    max-height: 100%;  /* กำหนดให้ความสูงของภาพไม่เกิน 100% ของพื้นที่ */
+    width: auto;       /* ปรับความกว้างอัตโนมัติ */
+    height: auto;      /* ปรับความสูงอัตโนมัติ */
+    object-fit: contain; /* ให้รูปไม่ถูกยืด */
+    border: 5px solid #fff; /* เพิ่มเส้นขอบสีขาวให้กับรูปภาพ */
+    border-radius: 10px; /* ทำมุมขอบให้โค้งมน */
+}
+.popup-content {
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    border: 5px solid #000000; /* เพิ่มเส้นขอบสีขาวให้กับป็อบอัพ */
+}
+
+
+
+
+/* รูปภาพหน้าสมัครเรียน */
+.pic_register {
+    display: flex;
+    justify-content: center; /* จัดตำแหน่งรูปภาพในแนวนอน */
+    align-items: center;     /* จัดตำแหน่งรูปภาพในแนวตั้ง */
+    height: 100%;            /* ให้ครอบคลุมความสูงทั้งหมดของบล็อค */
+    background-color: #f0e4da;
+}
+
+.pic_register img {
+    width: 60%;  /* กำหนดความกว้างของภาพ */
+    height: auto; /* ปรับความสูงให้คงสัดส่วน */
+    max-width: 60%; /* จำกัดความกว้างของภาพไม่เกิน 60% */
+}
+
+
+
+
+/* ปิดหน้าสมัครเรียน */

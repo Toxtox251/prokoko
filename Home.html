@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charansanitwong</title>
+    <link rel="stylesheet" href="CSS/home.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="CSS/nav.css">
+</head>
+<body>
+    <section1>
+
+
+
+        
+        <!-- ส่วนของแท็บบาร์ -->
+        <nav>
+         <div class="container">
+                <div class="nav-con">
+                    <div class="LOGOO">
+                     <a href="Home.html"><img src="pic/logo4.png" alt=""></a>
+                    </div>
+            <ul class="navbar">
+                <li><a href="STD.html">สาขาวิชา</a></li>
+                <li><a href="Activity.html">กิจกรรม</a></li>
+                <li><a href="register.html">สมัครเรียน</a></li>
+                <li><a href="contact.html">ติดต่อเรา</a></li>
+            </ul>
+                </div>
+            </div>
+        </nav>
+        
+<!-- ปุ่มกลมๆ -->
+<link rel="stylesheet" href="CSS/pop.css">
+<script src="JAVA/pop.js"></script>
+<div class="floating-button" id="floatingButton" onmousedown="startDrag(event)">
+    <span class="close-button" onclick="closeFloatingButton()">×</span>
+    <button onclick="togglePopup(event)">คลิ๊ก</button>
+</div>
+<!-- ป๊อปอัพ -->
+<div class="popup-overlay" id="popupOverlay" onclick="closePopup()"></div>
+<div class="popup" id="popup" style="display: none;">
+    <div class="popup-header">รับสมัครนักศึกษา</div>
+    <div class="popup-content">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfpEWdO8EdsjTCas4nMDYcP9JST-yw_VlRFX04u9VeSqnHa_g/viewform"><img src="/pic/pop/pop.png"></a>
+    </div>
+    <button class="close-button" onclick="closePopup()">ปิ   ด</button>
+</div>
+<!--  -->
+
+
+
+        <div class="loobpap">
+            <div class="imggi">
+                <img src="pic/longDo/Yellow and White Modern Illustrative Cyber Monday Sale Banner.png" alt="">
+            </div>
+
+            <!-- <div class="textpap">
+                <h1>วิทยาลัยเทคโนโลยีจรัลสนิทวงศ์ CTC</h1>
+                <p>เราคือวิทยาลัยอาชีวศึกษาเอกชน ที่มีคุณภาพการจัดการเรียนการสอนในระดับสูง ได้รับการยอมรับในระดับสากล กว่า 50 ปี ที่จัดตั้งวิทยาลัยฯ แห่งนี้ขึ้นมา โดยวิสัยทัศน์ของผู้บริหารสถานศึกษา ดร.ศิริมา พรนิมิตร ประธานกรรมการบริหาร วิทยาลัยเทคโนโลยีจรัลสนิทวงศ์ ดำเนินการจัดการเรียนรู้พร้อมคณาจารย์ผู้ทรงคุณวุฒิ ในการจัดการศึกษาด้านบริหารธุรกิจ เทคโนโลยีสารสนเทศและการสื่อสาร อุตสาหกรรมการท่องเที่ยว ภาษาต่างประเทศธุรกิจ และการศึกษาระบบทวิภาคี ซึ่งปัจจุบันทางวิทยาลัยฯ เปิดการสอน 2 หลักสูตร ได้แก่ ปวช. และ ปวส. มีรอบจัดการเรียนการสอนคือ รอบปกติ สำหรับนักศึกษาทั่วไป และ รอบวันอาทิตย์ สำหรับบุคคลทั่วไปหรือผู้ที่ทำงานประจำ เพื่อใช้ในการพัฒนาศักยภาพฝีมือการปฏิบัติงานตนเอง</p> 
+             </div> --> 
+
+        </div>
+
+        
+
+
+            <div class="content-container">
+              <div class="image-container">
+                <img src="pic/longDo/IMG_2233.PNG" alt="Placeholder Image">
+              </div>
+              <div class="text-container1">
+                <h2>วิทยาลัยเทคโนโลยีจรัญสนิทวงศ์</h2>
+                <p>
+
+                    วิทยาลัยเทคโนโลยีจรัญสนิทวงศ์ เป็นสถาบันอาชีวศึกษาเอกชนที่มีประวัติความเป็นมายาวนาน ก่อตั้งขึ้นเพื่อมุ่งเน้นการผลิตบุคลากรที่มีคุณภาพในสายวิชาชีพ โดยเริ่มต้นจากการเป็นโรงเรียนพณิชยการ ก่อนจะพัฒนาเป็นวิทยาลัยเทคโนโลยีที่เปิดสอนในระดับประกาศนียบัตรวิชาชีพ (ปวช.) และประกาศนียบัตรวิชาชีพชั้นสูง (ปวส.)  
+                    
+                    ในช่วงแรก วิทยาลัยฯ เปิดสอนหลักสูตรด้านการบัญชี การขาย และเลขานุการ ต่อมาได้ขยายหลักสูตรครอบคลุมสาขาวิชาต่าง ๆ เช่น คอมพิวเตอร์ธุรกิจ การตลาด และบริหารธุรกิจ เพื่อรองรับการเปลี่ยนแปลงของตลาดแรงงานและเทคโนโลยีสมัยใหม่  
+                    
+                    วิทยาลัยฯ ให้ความสำคัญกับการพัฒนาโครงสร้างพื้นฐาน โดยสร้างอาคารเรียนที่ทันสมัย มีอุปกรณ์การเรียนที่ครบครัน และนำเทคโนโลยีเข้ามาใช้ในการจัดการเรียนการสอน นอกจากนี้ ยังมีความร่วมมือกับสถาบันการศึกษาและองค์กรต่างประเทศ เพื่อเปิดโอกาสให้นักศึกษาได้เรียนรู้มาตรฐานสากลและฝึกงานกับสถานประกอบการจริง  
+                    
+                    ด้วยความมุ่งมั่นในการพัฒนาคุณภาพการศึกษา วิทยาลัยเทคโนโลยีจรัญสนิทวงศ์ได้รับการรับรองมาตรฐานคุณภาพการศึกษา และได้รับรางวัลด้านการบริหารจัดการและการเรียนการสอนหลายรางวัล ปัจจุบัน ยังคงเป็นหนึ่งในสถาบันการศึกษาชั้นนำที่ผลิตบุคลากรสายอาชีพที่มีคุณภาพออกสู่ตลาดแรงงานของประเทศไทย</p>
+              </div>
+            </div>
+        <div class="text-big">
+            <h1>โรงเรียนของเราสร้างบนความเชื่อพื้นฐาน <span class="highlight">3 ประการ</span></h1>
+        </div>
+
+
+
+    </section1>
+
+    
+
+    <section2>  
+    <!-- ส่วนของการ์ด -->
+
+
+
+    
+    <div class="wrapper">
+
+        
+
+        <div class="card card1">
+            <img src="pic/ทำการ์ด/c4.jpg" alt="">
+            <div class="icon-pic1">
+                <i class="bi bi-emoji-grin"></i>
+                <h6>ความสามารถ</h6>
+            </div>
+            <div class="info">
+                <p>ความสามารถของนักเรียนคือทักษะและความรู้ที่พัฒนาในหลายด้าน เช่น วิชาการ การสื่อสาร ศิลปะ กีฬา และเทคโนโลยี ซึ่งช่วยเสริมสร้างการเรียนรู้และการเติบโตในชีวิตประจำวัน</p>
+            </div>
+        </div>
+    
+        <div class="card card2">
+            <img src="pic/ทำการ์ด/c2.jpg" alt="">
+            <div class="icon-pic2">
+                <i class="bi bi-box2-heart"></i>
+                <h6>กล้าแสดงออก</h6>
+            </div>
+            <div class="info">
+                <p>ความสามารถของนักเรียนคือทักษะและความรู้ที่พัฒนาในหลายด้าน เช่น ความกล้าแสดงออก การสื่อสาร ศิลปะ กีฬา และเทคโนโลยี ซึ่งช่วยเสริมสร้างความมั่นใจในการเรียนรู้และการพัฒนาตนเองในชีวิตประจำวัน</p>
+            </div>
+        </div>
+    
+        <div class="card card3">
+            <img src="pic/ทำการ์ด/c7.jpg" alt="">
+            <div class="icon-pic3">
+                <i class="bi bi-emoji-grin"></i>
+                <h1>ทีม</h1>
+            </div>
+            <div class="info">
+                <p>ความสามารถของนักเรียนคือทักษะและความรู้ที่พัฒนาในหลายด้าน เช่น การทำงานเป็นทีม ซึ่งช่วยเสริมสร้างความร่วมมือ การแบ่งปันความคิดเห็น และการแก้ปัญหาด้วยกันในสภาพแวดล้อมที่หลากหลาย</p>
+            </div>
+        </div>
+    </div>
+    
+</section2>   
+
+
+
+
+    <div class="tab">
+        <img src="pic/TAB/CHARANSANITWONG.png" alt="">
+    </div>
+
+    <section3>
+
+        <div class="text-big">
+            <h1>แนวทางวิทยาลัยทั้ง <span class="highlight">2 อย่าง</span></h1>
+        </div>
+
+        <div class="wrapper2">
+
+            
+
+            <div class="card card4">
+                <img src="pic/ทำการ์ด/c1.jpg" alt="">
+                <div class="icon-pic4">
+                    <i class="bi bi-book-half"></i>
+                    <h6>หลักสูตรของทางวิทยาลัยฯ</h6>
+                </div>
+                <div class="info">
+                    <p>ได้รับรองมาตรฐานการศึกษา โดย สำนักงานรับรองมาตรฐานและประเมินคุณภาพการศึกษา สมศ. (องค์การมหาชน) ด้านการอาชีวศึกษา ซึ่งมีความทันสมัย สอดคล้องกับเทคโนโลยีการเรียนรู้ที่ก้าวกระโดดอย่างรวดเร็ว ผู้สำเร็จการศึกษาจะมีวุฒิการศึกษาระดับ ปวช. และ ปวส. เทียบเท่าวิทยาลัยของรัฐทุกประการ</p>
+                </div>
+            </div>
+        
+            <div class="card card5">
+                <img src="pic/ทำการ์ด/c3.jpg" alt="">
+                <div class="icon-pic5">
+                    <i class="bi bi-arrow-up-circle-fill"></i>
+                    <h6>เรามุ่งมั่นพัฒนาสถานศึกษา</h6>
+                </div>
+                <div class="info">
+                    <p>ให้มีความเป็นเลิศในทุกมิติ และมีส่วนร่วมในการพัฒนาสังคมและชุมชน พร้อมตระหนักถึงความสำคัญในการพัฒนาผู้เรียนทุกระดับ ทุกรอบเรียน ให้ตรงกับนโยบายที่ว่า "วันแรกที่เรียน คือ วันแรกที่มีงานทำ" นักศึกษาที่เรียนจบจากวิทยาลัยฯ สามารถศึกษาต่อถึงระดับ ป.ตรี กับ วิทยาลัยอินเตอร์เทคลำปาง (ศูนย์กรุงเทพฯ)</p>
+                </div>
+            </div>
+        
+            
+        </div>
+        
+        
+        <!-- จำนวนคน -->
+        <div class="num-container">
+
+            <div class="label">
+                <h1>จำนวนนักศึกษา</h1>
+                <div id="numberDisplay">0</div> 
+            </div>
+            <div class="label">
+                <h1>จำนวนปีที่เปิดการศึกษากว่า</h1>
+                <div id="numberDisplay2">0</div> 
+            </div>
+            <div class="label">
+                <h1>คณะครูอาจารย์</h1>
+                <div id="numberDisplay3">0</div> 
+            </div>
+        </div>
+
+
+        <!-- ส่วนของรูปภาพ  -->
+        <!-- <div class="slideshow-container">
+            <div class="slide fade">
+                <img src="pic/G1.jpg" class="slide-img" alt="รูปภาพที่ 1">
+            </div>
+            <div class="slide fade">
+                <img src="pic/G2.jpg" class="slide-img" alt="รูปภาพที่ 2">
+            </div>
+            <div class="slide fade">
+                <img src="pic/G3.jpg" class="slide-img" alt="รูปภาพที่ 3">
+            </div>
+        </div>
+        <div class="btn-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+
+
+
+        </div> -->
+
+
+
+
+
+        <div class="card-wrapper">
+            <div class="card-grid">
+                <article class="card-item">
+                    <img src="pic/การ์ด/long.png" alt="image" class="card-image">
+        
+                    <div class="card-info">
+                        <h3 class="card-title">Elegant <br> Queen Bee</h3>
+                       
+                    </div>
+        
+                    <img src="pic/backgroud/Yellow Comic Style Background Story.png" alt="image" class="card-background">
+                    
+                    <a href="#" class="card-button">
+                        View More <i class="ri-arrow-right-line"></i>
+                    </a>
+                </article>
+        
+                <article class="card-item">
+                    <img src="pic/การ์ด/230711_Profile_Charansanitwong_Technological00320-removebg-preview.png" alt="image" class="card-image">
+        
+                    <div class="card-info">
+                        <h3 class="card-title">Mechanical Magic <br> Butterfly</h3>
+                        
+                    </div>
+        
+                    <img src="pic/backgroud/Red Yellow Creative Comic Blank Instagram Story.png" alt="image" class="card-background">
+        
+                    <a href="#" class="card-button">
+                        View More <i class="ri-arrow-right-line"></i>
+                    </a>
+                </article>
+        
+                <article class="card-item">
+                    <img src="pic/การ์ด/230711_Profile_Charansanitwong_Technological00567-removebg-preview.png" alt="image" class="card-image">
+        
+                    <div class="card-info">
+                        <h3 class="card-title">Wonderful <br> Flower Beetle</h3>
+                        
+                    </div>
+        
+                    <img src="pic/backgroud/Purple White Cute Colorful Comic Background Your Story.png" alt="image" class="card-background">
+        
+                    <a href="#" class="card-button">
+                        View More <i class="ri-arrow-right-line"></i>
+                    </a>
+                </article>
+            </div>
+        </div>
+        
+        
+        
+
+
+
+        <div class="gallery-section">
+            <h2>แกลเลอรีภาพ</h2>
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <a href="https://photos.google.com/share/AF1QipMSaIlUpdoF0gXbub8xuCuwpfQKHnCGULAlU04F9HuZ2qZ7LJhIi0nhdpLwFdvFPQ?key=cXpBRXFFbVhHMl9TeUdqc2k3eW5xRlJpN2kwUE5R"><img src="pic/gallery/IMG_9952.jpg" alt="Image 1"></a>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://photos.google.com/share/AF1QipOQyEs_AW-9EX6rLXHuU49kfy3vJp3JuRoDTcnBx0DHfTG21mLDLUJoSbFmC2AhNw?key=dzkwZnlzS01jMHd3cW5pOUpjTXJ3NXd3Z0VlalN3"><img src="pic/gallery/IMG_6307.jpg" alt="Image 2"></a>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://photos.google.com/share/AF1QipPIoPufoSvawBh8HdcD5S9u0uER0TLCcB_BhnXnXkVpfM11s5IFlu7z1-XIJUnC8Q?key=bTdtbTR6bnJtWkg3NGVyYkFwV0VydHlnNk1oSVd3"><img src="pic/gallery/IMG_8716.jpg" alt="Image 3"></a>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://photos.google.com/share/AF1QipO0f4i5Kr8B37o4WYOzOc99wmj12cN7eVp5pCmUM_HI9Wz4g3X9Ipg_1Hpxy0Kcbg?key=VFZpdG96cmxXNDNFRXgtaGNVdWRlNmJEUnowQkJR"><img src="pic/gallery/IMG_7117.jpg" alt="Image 4"></a>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://photos.google.com/share/AF1QipMO-RGQOYNyXjfHLJOUHzT6bGQszhBEcuAVR8PQ4YTLVHpMzmB0CMhL7ecmIuDUTQ?key=cWNfSXQ0ZklfLUhlR0tScDZRN1AwS05KUjJCWHhn"><img src="pic/gallery/IMG_7104.jpg" alt="Image 5"></a>
+                </div>
+                <div class="gallery-item">
+                    <a href="https://photos.google.com/share/AF1QipOaNzUve6zJ47rsc5ago_gMcIJNWS522O_8QcxqJolKR1d1_lC1cN9hX1sYN3ERyA?key=bWNoRGMyREdnSUdOZWNva3YtX0ZqTXp1ZFA5Zkpn"><img src="pic/gallery/IMG_4698.jpg" alt="Image 6"></a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+    <!-- โครงสร้างของเนื้อหาทั้งหมด -->
+    <div class="main-container">
+        <!-- หัวข้อที่จะแสดงอยู่ข้างบน -->
+        <div class="title-container">
+            <h1 class="page-header">ติดต่อสอบถาม</h1>
+        </div>
+
+        <!-- รูปภาพที่จะแสดงอยู่ข้างล่าง -->
+        <div class="image-container">
+            <img src="pic/qr2.png" alt="Image 1" class="image-item">
+        </div>
+    </div>
+
+
+
+    </section3>
+
+    
+    
+
+
+    <footer>
+        <div class="footer">
+            <div class="footer-logo">
+                <a href="Home.html"><img src="pic/logo4.png" alt="Company Logo"></a>
+            </div>
+            <div class="footer-info">
+                <div class="footer-section">
+                    <h4>ที่อยู่</h4>
+                    <p> เลขที่ 18 ซ.จรัญสนิทวงศ์ 41 แขวงอรุณอัมรินทร์ เขตบางกอกน้อย	 กรุงเทพมหานคร</p>
+                </div>
+                <div class="footer-section">
+                    <h4>ติดต่อเรา</h4>
+                    <p>โทร: 02-434-6155</p>
+                    <p>อีเมล: ctc.bangkok@gmail.com</p>
+                </div>
+                <div class="footer-icon">
+                    <h4>ติดตามเรา</h4>
+                    <div>
+                    <a href="https://www.facebook.com/CTC.Bangkok"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/ctc.bkk/"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@toktokthongpung?lang=en"><i class="bi bi-tiktok"></i></a>
+                </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="JAVA/janav.js"></script>
+    <script src="JAVA/jahome.js"></script>
+</body>
+</html>

@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Pridi:wght@200;300;400;500;600;700&display=swap');
+section1 {
+    position: relative;
+    width: 100% ;
+    height: auto;
+    background: #f0e4da;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+}
+
+
+section2 {
+    position: relative;
+    width: 100% ;
+    height: 50vh;
+    background: #f0e4da;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+}
+
+section_U {
+    position: relative;
+    width: 100% ;
+    height: auto;
+    background-color: #001f3d;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #eaeaea;
+}
+
+/* รูปบนสุด */
+.imggi {
+    position: relative; /* ให้สามารถจัดตำแหน่งของ overlay ได้ */
+    width: 100%;
+    height: 100vh; /* ให้คอนเทนเนอร์มีความสูงเต็มความสูงของหน้าจอ */
+    overflow: hidden; /* ป้องกันการเลื่อนออกนอกขอบเขต */
+}
+
+.imggi img {
+    width: 100%; /* ให้รูปภาพขยายเต็มความกว้างของคอนเทนเนอร์ */
+    height: 100%; /* ให้รูปภาพขยายเต็มความสูงของคอนเทนเนอร์ */
+    object-fit: cover; /* ทำให้รูปภาพปรับขนาดให้เต็มคอนเทนเนอร์ */
+    display: block; /* ป้องกันปัญหา whitespace ที่ไม่ต้องการ */
+}
+
+.imggi::before {
+    content: ""; /* ต้องระบุ content สำหรับ pseudo-element */
+    position: absolute; /* วาง overlay แบบ absolute */
+    top: 0;
+    left: 0;
+    width: 100%; /* ความกว้างเต็มคอนเทนเนอร์ */
+    height: 100%; /* ความสูงเต็มคอนเทนเนอร์ */
+    background: rgba(0, 0, 0, 0.5); /* สีพื้นดำโปร่งแสงเพื่อให้ข้อความอ่านง่าย */
+    z-index: 1; /* ให้แน่ใจว่า overlay อยู่บนรูปภาพ */
+}
+
+
+
+
+/* ข้อความบยรูปบนที่สุด */
+.textpap {
+    position: absolute; 
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    color: #fff; 
+    z-index: 2; 
+    text-align: center; 
+    padding: 20px;
+    width: 80%; 
+    box-sizing: border-box; 
+    font-family: Arial, sans-serif; 
+    max-width: 800px; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+}
+
+.textpap h1 {
+    margin: 0 0 10px 0; 
+    font-size: 2.5vw;
+    text-align: center;
+    border-radius: 10px; 
+    padding: 10px; 
+}
+
+.textpap p {
+    margin: 0;
+    font-size: 1.2vw; 
+    text-align: left;
+    
+    border-radius: 10px; 
+    padding: 10px; 
+}
+
+
+
+
+.gallery-section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.gallery-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    width: calc(33.333% - 20px); /* ใช้ calc เพื่อลดช่องว่างระหว่างภาพ */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* กำหนดให้แสดง 2 แถวในหน้าจอเล็ก */
+@media screen and (max-width: 768px) {
+    .gallery-item {
+        width: calc(50% - 20px); /* แสดงภาพ 2 ภาพในแถวเดียว */
+    }
+}
+
+/* กำหนดให้แสดง 1 แถวในหน้าจอเล็กที่สุด */
+@media screen and (max-width: 480px) {
+    .gallery-item {
+        width: 100%; /* แสดงภาพ 1 ภาพเต็มหน้าจอ */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.layout-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* ส่วนข้อความ */
+.info-section {
+    width: 45%;
+    text-align: left;
+    padding-left: 5%;
+}
+
+.info-title {
+    font-size: 42px;
+    font-weight: bold;
+    color: #f36d00; /* สีตัด */
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.info-subtitle {
+    font-size: 28px;
+    color: #444;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+.news-box {
+    padding: 15px;
+    border-left: 5px solid #f36d00; /* สีตัดขีดเส้นข้าง */
+    text-align: left;
+}
+
+.news-title {
+    font-size: 24px;
+    color: #f36d00;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.news-content {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #f36d00; /* สีตัด */
+    font-weight: bold;
+    border-bottom: 2px solid #f36d00;
+    padding-bottom: 2px;
+}
+
+.read-more:hover {
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    color: #d85c00;
+}
+
+/* ส่วนวิดีโอ */
+.media-box {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 0; /* ชิดขวาสุด */
+}
+
+.media-box iframe {
+    width: 100%;
+    height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
